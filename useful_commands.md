@@ -4,7 +4,7 @@
 
 this features allows you to shorten the commands
 
-$ alias name=command
+**$ alias name=command**
 
 ## Creating files 
 
@@ -19,11 +19,17 @@ or use **$ touch file.ext** to create an empty file
 ## File/dir  manipulations
 
 rm: remove file
+
 rmdir: remove directory
+
 tab: autocomplete
+
 mkdir: make directory
+
 cd: change directory
+
 ls: list
+
 ls -R:inside, -F:type
 
 
