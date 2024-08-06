@@ -1,0 +1,14 @@
+In order to start uploaading files from the terminal to the repostitory, you need first to 
+1. Create the Repo on GitHub
+2. Clone the repo to your pc
+	a. Get the SSH link of the GitHub repo
+	b. Use the command "git clone"
+		eg: git clone [repo URL]
+-->Then the repo is cloned locally
+(to check the URLS linked to the local repo, we use the command "git remote -v"
+
+In order to add a file into the repo
+1.Create/import the file
+2.git add file
+3.git commit -m "(message)"
+4.git push
