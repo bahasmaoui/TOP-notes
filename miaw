@@ -1,0 +1,96 @@
+body{
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+}
+.img.logo{
+    align-self: center;
+}
+.header-left{
+    align-self: flex-start;
+    display: flex;
+    gap: 32px;
+    
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+li{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.desc{
+    display: flex;
+    align-items: center;
+    background-color: #FFF2F2;
+    padding: 100px 0;
+    justify-content: center;
+}
+.img.posters{
+    width: 40%;
+    padding: 36px;
+}
+.box{
+    display: flex;
+    padding:50px 100px;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.desc-title{
+    color:#C51A13;
+    font-size: 64px;
+    margin-bottom: -10px;
+    align-self: flex-end;
+    font-weight: 900;
+    margin-top: -10px;
+}
+
+.learn-more{
+    background-color: #C51A13;
+    padding: 10px 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 35px;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    border:0;
+    align-self: center;
+}
+
+.divider{
+    
+}
+/*CONTAINER CARDS  */
+
+.container {
+    align-self: center;
+    display: flex;
+    gap:250px;
+    padding: 100px 0;
+
+
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
