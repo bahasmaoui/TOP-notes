@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function greet(greeting, userName = "Baha") {
+            alert(greeting + " " + userName);
+        }
+        let greeting = "Good Morning";
+        let userName;
+        greet(greeting, userName)
+
+
+        function checkAge(age) {
+            return age > 18 ? True : confirm("did you parents allow you?")
+        }
+
+        function checkAge(age) {
+            return age > 18 || confirm("did yo parents?")
+        }
+
+        function min(a, b) {
+            return (a > b) ? b : a
+        }
+        function pow(x, n) {
+            alert(n)
+            return (n == 0) ? 1 : x * pow(x, n - 1)
+        }
+        let sayHi = function () {
+            alert("hello !");
+        }
+    
+        function show() {
+            alert('hooooray');
+        }
+        function hide() {
+            alert("fuck nah");
+        }
+        let sum = (a, b, c) => a + b + c
+        console.log(sum(1, 2, 3))
+
+        let ask = (question,yes,no) => confirm(question)? yes() : no();
+        ask ("Do you agree?", () => alert("nyeah"), ()=> alert("nn"));
+    </script>
+</body>
+
+</html>

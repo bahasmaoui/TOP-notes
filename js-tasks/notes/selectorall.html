@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectorAll</title>
+</head>
+<body>
+    <h1>Numbers</h1>
+    <p class="greet">Hello</p>
+    <input type="text" name="" id="" class="greet">
+    <p class="greet">how</p>
+    <p class="greet">are</p>
+    <p class="greet">you</p>
+    <button onclick="joinThem()">Click Me!</button>
+    <p class="final"></p>
+
+</body>
+<script>
+    function joinThem(){
+        const final = document.querySelector('.final');
+        const text = document.querySelectorAll('.greet');
+        let arr;
+        let words = [];
+        arr = Array.from(text);
+        for (let i = 0; i < arr.length; i++) {
+            words.push(arr[i].innerHTML);
+            words.push(arr[i].value);
+        }
+        final.textContent = words.join(' ');
+        
+    }
+</script>
+</html>

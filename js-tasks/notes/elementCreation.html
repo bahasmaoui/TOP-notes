@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elementCreation</title>
+    <style>
+        #myDiv{
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const div = document.createElement("div");
+        div.textContent = "Hello!";
+        div.style.color = "red";
+        div.id = "myDiv"
+        document.body.appendChild(div);
+
+    </script>
+</body>
+</html>

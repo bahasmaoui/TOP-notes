@@ -1,0 +1,14 @@
+These are notes about using FlexBox
+
+display: flex; (is like saying I want to use flex to align these items)
+
+justify-content: horizental
+align-items: vertical
+
+flex-wrap: wrap/no-wrap/wrap-reverse (rjou3 lstar)
+
+flex-direction: row, column, [reverse]
+
+align/justify  -self (one thing only)
+
+align-content(when there are multiple lines snn align-items)

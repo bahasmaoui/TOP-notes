@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsEvents</title>
+</head>
+<style>
+    .buttons{
+        display: flex;
+        gap: 16px;
+        padding: 16px;
+        margin: 100px auto;
+        border: 1cm solid #C0C0C0;
+        width: 35%;
+        height: 15pc;
+        border-radius: 35px;
+        flex-direction: column;
+    }
+    .click, .click2, .deletebtn {
+        height: 50px;
+    }
+    .result {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: 2em;
+        padding: 0 40px;
+        margin: 0;
+    }
+    #mousedown {
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: white;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .child-container{
+        display: flex;
+        gap: 16px;
+        justify-content: space-between;
+    }
+    .call-btn{
+        background-color: green;
+        color: white;
+        border: 1px solid green;
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        
+    }
+    .phone-call{
+        width: 75%;
+    }
+</style>
+<body onload="play()">
+    <h1>Clicking Section</h1>
+    <div class="buttons">
+    <button class="click">Click me!</button>
+    <button class="click2">Try me?</button></div>
+    <div class="result"></div>
+</body>
+<script>
+    function play(){
+    const result = document.querySelector('.result');
+    const buttonContainer = document.querySelector('.buttons');
+    const button1 = document.querySelector('.click');
+    
+    const childContainer = document.createElement('div');
+    childContainer.className = 'child-container';
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = "Clear all";
+    deleteButton.className='delete-btn';
+    deleteButton.style.width= '75%';
+    childContainer.append(deleteButton);
+
+    const callButton = document.createElement('button');
+    callButton.className = "call-btn";
+    callButton.innerHTML= '<img src ="icons8-phone-50.png" class="phone-call">';
+    callButton.style.color= 'white';
+    childContainer.append(callButton);
+    buttonContainer.append(childContainer);
+
+    butterfly = document.createElement('audio');
+    butterfly.src = 'butterfly-smile -Barbie phone toy-[meme].mp3';
+    
+    
+    button1.addEventListener('click', (event) => {
+        const p = document.createElement('p');
+        p.textContent = "click !";
+        result.append(p); 
+    }) 
+    const button2 = document.querySelector('.click2');
+    button2.addEventListener('mousedown', (event) => {
+        button2.textContent = 'freak bob? Would you answer?';
+        button2.id = "mousedown";
+    });
+    button2.addEventListener('mouseup', (event) => {
+        button2.textContent = "Try me?";
+        button2.id = '';
+        const img = document.createElement('img');
+        img.src= "https://i1.sndcdn.com/artworks-FvtxPflQhz6kvRHB-YnA9Xw-t500x500.jpg";
+        result.append(img);
+    })
+    deleteButton.addEventListener('click',() => {
+        result.textContent = '';
+    })
+    callButton.addEventListener('click', (event) =>{
+        butterfly.play()
+        result.textContent= '';
+        const img = document.createElement('img');
+        img.src= "https://i1.sndcdn.com/artworks-FvtxPflQhz6kvRHB-YnA9Xw-t500x500.jpg";
+        img.style.width='100vw';
+        img.style.height='100vh';
+        
+        const body = document.querySelector('body');
+        body.textContent = '';
+        body.append(img);
+        
+    })
+
+    butterfly.addEventListener('ended', () => {
+        document.body.innerHTML = `
+                <h1>Clicking Section</h1>
+                <div class="buttons">
+                    <button class="click">Click me!</button>
+                    <button class="click2">Try me?</button>
+                </div>
+                <div class="result"></div>
+            `;
+            play();
+    })
+    }
+</script>
+</html>
